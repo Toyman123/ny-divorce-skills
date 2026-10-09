@@ -1,8 +1,8 @@
 # New York Divorce Form Skills
 
-This project contains two Claude skills for filling out New York State uncontested joint divorce forms. One skill is for cases without children under 21, and the other is intended for cases with children under 21.
+This project contains two Claude skills for filling out New York State uncontested joint divorce forms. One skill is for cases without children under 21, and the other covers the workflow for cases with children under 21.
 
-I built this to make the form-filling process more organized. Case information is entered in a JSON file, and the working skill places that information onto copies of the official court forms. It creates a separate filled PDF for each form in the packet.
+I built this to make the form-filling process more organized. Case information is entered in a JSON file, and the no-children filler places that information onto copies of the official court forms. It creates a separate filled PDF for each form in the packet.
 
 ## How It Works
 
@@ -13,7 +13,8 @@ The text placement uses fixed coordinates instead of asking the AI to guess wher
 ## Current Features
 
 - A case template showing the available fields
-- Support for the no-children joint divorce packet
+- A Python filler for the no-children joint divorce packet
+- Detailed with-children workflow instructions covering forms, field placement, and child-support calculations
 - One filled PDF created for each selected form
 - Fixed placement for answers on the official form layouts
 - Blank fields for information that must be added later
@@ -45,7 +46,7 @@ To use one of these folders as a Claude skill, copy it into `~/.claude/skills/`.
 
 ## Project Status
 
-The skill for cases without children is the working part of this project. The skill for cases with children is currently a stub. It includes planning instructions and a blank packet, but it does not include the Python filler script or the other files needed to run it.
+The no-children folder includes a runnable Python filler, case template, reference files, and official blank packet. The with-children folder includes detailed workflow instructions and the official blank packet. Its instructions reference a filler, child-support calculator, case templates, and reference files that are not included in this repository, so that workflow cannot currently be run end to end from this checkout.
 
 There are no automated tests yet. Filled forms should always be opened and checked carefully because a change to the official PDF can cause text to move out of place. The sample case data is fictional and is only included to show the expected format.
 
