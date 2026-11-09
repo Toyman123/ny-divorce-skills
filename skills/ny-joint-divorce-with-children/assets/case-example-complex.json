@@ -1,0 +1,339 @@
+{
+  "_comment": "Complex FICTIONAL example exercising the harder branches: maintenance in-form, over-cap income, deviation, an 18-20 child, an existing Family Court custody order, a represented spouse, write-in property/debt, marital home, real estate, an order of protection, military service, religious ceremony.",
+  "as_of": "06/01/2026",
+  "county": "ANY",
+  "index_no": "123456/2026",
+  "date_summons_filed": "05/04/2026",
+  "date_summons_served": "05/04/2026",
+  "spouse1": {
+    "first": "JANE",
+    "middle": "Q",
+    "last": "DOE",
+    "birth_name": "ROE",
+    "address": "123 MAIN STREET, ANYTOWN, NEW YORK 12345",
+    "address_short": "123 MAIN STREET, ANYTOWN, NY 12345",
+    "address_parts": {
+      "street": "123 MAIN STREET",
+      "city": "ANYTOWN",
+      "state": "NY",
+      "zip": "12345"
+    },
+    "address_history": [],
+    "prior_names": [
+      {
+        "last": "ROE",
+        "first": "JANE"
+      }
+    ],
+    "dob_month": "01",
+    "dob_day": "01",
+    "dob_year": "1985",
+    "birth_state": "NEW YORK",
+    "sex": "F",
+    "residence_state": "NEW YORK",
+    "residence_county": "ANY",
+    "locality_type": "CITY",
+    "locality_name": "ANYTOWN",
+    "within_limits": "YES",
+    "if_no_town": "",
+    "phone": "555-0100",
+    "on_public_assistance": false,
+    "represented": true,
+    "attorney_name": "A. ATTORNEY",
+    "attorney_address_line1": "100 EXAMPLE ROAD",
+    "attorney_address_line2": "ANYTOWN, NEW YORK 12345",
+    "attorney_address_short": "100 EXAMPLE ROAD, ANYTOWN, NY 12345",
+    "attorney_phone": "555-0102",
+    "attorney_fax": "",
+    "health_plan": "EXAMPLE HEALTH PLAN",
+    "health_plan_address": "PO BOX 000, ANYTOWN, NY 12345",
+    "health_plan_id": "EXAMPLE-000000",
+    "health_plan_admin": "EXAMPLE ADMINISTRATOR",
+    "former_last_name": "ROE",
+    "marriage_number": "FIRST",
+    "prior_ended_death": "NONE",
+    "prior_ended_divorce": "NONE",
+    "education_box": 17
+  },
+  "spouse2": {
+    "first": "JOHN",
+    "middle": "Q",
+    "last": "DOE",
+    "birth_name": "",
+    "address": "45 OAK AVENUE, ANYTOWN, NEW YORK 12345",
+    "address_short": "45 OAK AVENUE, ANYTOWN, NY 12345",
+    "address_parts": {
+      "street": "45 OAK AVENUE",
+      "city": "ANYTOWN",
+      "state": "NY",
+      "zip": "12345"
+    },
+    "address_history": [
+      {
+        "street": "123 MAIN STREET",
+        "city": "ANYTOWN",
+        "state": "NY",
+        "zip": "12345"
+      }
+    ],
+    "prior_names": [],
+    "dob_month": "02",
+    "dob_day": "02",
+    "dob_year": "1983",
+    "birth_state": "NEW YORK",
+    "sex": "M",
+    "residence_state": "NEW YORK",
+    "residence_county": "ANY",
+    "locality_type": "TOWN",
+    "locality_name": "ANYTOWN",
+    "within_limits": "NO",
+    "if_no_town": "ANYTOWN",
+    "phone": "555-0101",
+    "on_public_assistance": false,
+    "represented": true,
+    "attorney_name": "B. COUNSEL",
+    "attorney_address_line1": "200 SAMPLE PLAZA, SUITE 4",
+    "attorney_address_line2": "OTHERTOWN, NEW YORK 12399",
+    "attorney_address_short": "200 SAMPLE PLAZA, OTHERTOWN, NY 12399",
+    "attorney_phone": "555-0199",
+    "attorney_fax": "",
+    "health_plan": "SAMPLE CARE PPO",
+    "health_plan_address": "1 PLAN WAY, OTHERTOWN, NY 12399",
+    "health_plan_id": "SC-000000",
+    "health_plan_admin": "SAMPLE BENEFITS INC",
+    "former_last_name": "",
+    "marriage_number": "FIRST",
+    "prior_ended_death": "NONE",
+    "prior_ended_divorce": "NONE",
+    "education_box": 12
+  },
+  "children": [
+    {
+      "first": "ALEX",
+      "middle": "",
+      "last": "DOE",
+      "dob": "05/10/2007",
+      "sex": "M",
+      "address": "STUDENT HOUSING, COLLEGE TOWN, NY 13000",
+      "lives_with": "SPOUSE 1 (MOTHER) WHEN HOME",
+      "relationship": "MOTHER",
+      "public_assistance": false,
+      "legal_custody": "joint",
+      "physical_custody": "spouse1"
+    },
+    {
+      "first": "SAM",
+      "middle": "",
+      "last": "DOE",
+      "dob": "09/22/2012",
+      "sex": "F",
+      "address": "123 MAIN STREET, ANYTOWN, NY 12345",
+      "lives_with": "SPOUSE 1 (MOTHER)",
+      "relationship": "MOTHER",
+      "public_assistance": false,
+      "legal_custody": "joint",
+      "physical_custody": "spouse1"
+    },
+    {
+      "first": "RILEY",
+      "middle": "",
+      "last": "DOE",
+      "dob": "01/15/2015",
+      "sex": "M",
+      "address": "123 MAIN STREET, ANYTOWN, NY 12345",
+      "lives_with": "SPOUSE 1 (MOTHER)",
+      "relationship": "MOTHER",
+      "public_assistance": false,
+      "legal_custody": "spouse1",
+      "physical_custody": "spouse1"
+    },
+    {
+      "first": "JORDAN",
+      "middle": "",
+      "last": "DOE",
+      "dob": "07/30/2019",
+      "sex": "F",
+      "address": "123 MAIN STREET, ANYTOWN, NY 12345",
+      "lives_with": "SPOUSE 1 (MOTHER)",
+      "relationship": "MOTHER",
+      "public_assistance": false,
+      "legal_custody": "joint",
+      "physical_custody": "joint"
+    }
+  ],
+  "custody": {
+    "type": "order",
+    "order_county": "ANY",
+    "order_docket": "V-00000-24",
+    "order_date": "02/01/2025",
+    "parenting_time": "schedule",
+    "visitation_parent": "spouse2",
+    "parenting_time_schedule": "Every other weekend Friday 5 PM to Monday school drop-off, two weeks each summer, and alternating Thanksgiving, winter break and spring break."
+  },
+  "income": {
+    "spouse1": {
+      "A": "60000",
+      "C": "3720",
+      "D": "870"
+    },
+    "spouse2": {
+      "A": "240000",
+      "B": "9000",
+      "C": "11439",
+      "D": "3480",
+      "F": "6000"
+    }
+  },
+  "child_support": {
+    "custodial_parent": "spouse1",
+    "scu": {
+      "who": "spouse1",
+      "status": "requesting"
+    },
+    "existing_order": null,
+    "agreement": "in_form",
+    "agreement_date": "",
+    "paid_to": "scu",
+    "frequency": "month",
+    "over_cap": "apply",
+    "deviate": true,
+    "agreed_amount": "3500",
+    "deviation_reason": "Spouse 2 will pay the oldest child's college room and board directly, which the guideline amount does not account for.",
+    "court_deviation_reason": "The parties' agreement accounts for the child's college expenses paid directly by Spouse 2.",
+    "income_deduction": "good_cause",
+    "child_care": {
+      "spouse2": {
+        "pct": 75,
+        "amount": "900",
+        "frequency": "month"
+      }
+    },
+    "education": {
+      "spouse2": [
+        {
+          "for": "College tuition and room and board (Alex)",
+          "amount": "",
+          "pct": 100
+        },
+        {
+          "for": "Private school tuition (Sam)",
+          "amount": "12000",
+          "pct": ""
+        }
+      ],
+      "spouse1": [
+        {
+          "for": "Summer camp",
+          "amount": "",
+          "pct": 25
+        }
+      ]
+    },
+    "health": {
+      "covered_by": "spouse2",
+      "premium": "420",
+      "premium_frequency": "two_weeks",
+      "spouse1_pct": 25,
+      "spouse2_pct": 75,
+      "unreimbursed": {
+        "spouse1_pct": 25,
+        "spouse2_pct": 75
+      },
+      "qmcso": true
+    },
+    "good_cause_reason": "Spouse 2 is self-employed and pays by automatic bank transfer."
+  },
+  "background": {
+    "orders_of_protection": [
+      {
+        "against": "Spouse 2",
+        "county": "ANY",
+        "court": "Family",
+        "docket": "O-00000-23"
+      }
+    ],
+    "abuse_neglect": "",
+    "sex_offender": {}
+  },
+  "maintenance": {
+    "type": "in_form",
+    "payor": "spouse2",
+    "amount": "1500",
+    "frequency": "month",
+    "start": "07/01/2026",
+    "end": "06/30/2030",
+    "payment_method": "direct",
+    "guideline": {
+      "payor": "spouse2",
+      "amount": "21000",
+      "years_married": "14",
+      "min_years": "2",
+      "min_months": "1",
+      "max_years": "4",
+      "max_months": "2"
+    }
+  },
+  "marriage_date": "03/03/2012",
+  "marriage_place": "ANYTOWN, NEW YORK, USA",
+  "marriage_city": "ANYTOWN",
+  "marriage_county": "ANY",
+  "marriage_state": "NEW YORK",
+  "marriage_date_month": "03",
+  "marriage_date_day": "03",
+  "marriage_date_year": "2012",
+  "separated_month": "04",
+  "separated_year": "2025",
+  "ceremony": "religious",
+  "barriers": "taken",
+  "residency": "one_year_married_ny",
+  "military": [
+    "spouse2"
+  ],
+  "children_born": 4,
+  "marital_home": {
+    "occupant": "spouse1",
+    "address": "123 MAIN STREET, ANYTOWN, NY 12345",
+    "until": "the youngest child turns 18"
+  },
+  "property": "in_form",
+  "property_text": "Spouse 1 keeps the 2019 sedan and her retirement account; Spouse 2 keeps the 2021 truck and his business accounts. Household contents stay with Spouse 1.",
+  "real_estate": {
+    "from": "spouse2",
+    "address": "123 MAIN STREET, ANYTOWN, NY 12345",
+    "by_date": "90 days after the Judgment is entered"
+  },
+  "pensions": "qdro",
+  "debt": "in_form",
+  "debt_text": "Spouse 2 pays the joint credit card in full; each spouse pays the loans in his or her own name.",
+  "fees": {
+    "payor": "spouse2",
+    "amount": "5000",
+    "experts": "Spouse 2 pays the business valuator's fee in full."
+  },
+  "settlement_agreement": {
+    "day": "1st",
+    "month_year": "April 2026"
+  },
+  "property_allocation": {
+    "plaintiff_pct": 50,
+    "defendant_pct": 50
+  },
+  "serves_judgment": "spouse2",
+  "note_of_issue_filed_by": "plaintiff_attorney",
+  "issue_joined": "waiver",
+  "decree_granted_to": "PLAINTIFF",
+  "legal_grounds": "DRL 170(7) IRRETRIEVABLE BREAKDOWN",
+  "preparer_name": "A. Attorney",
+  "ancillary_relief": [
+    "property",
+    "maintenance",
+    "retirement",
+    "child_support",
+    "custody",
+    "visitation",
+    "fees",
+    "former_name",
+    "order_of_protection",
+    "marital_home"
+  ]
+}
