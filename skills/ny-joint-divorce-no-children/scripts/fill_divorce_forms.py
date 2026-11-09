@@ -72,6 +72,7 @@ class Sheet:
                 w, h = float(page.mediabox.width), float(page.mediabox.height)
                 buf = BytesIO()
                 c = canvas.Canvas(buf, pagesize=(w, h))
+                c.translate(float(page.mediabox.left), float(page.mediabox.bottom))   # DOH-2168 mediabox is offset
                 c.setFillColor(INK)
                 for (_, x, top, bottom, s, size, mode) in by_page[i]:
                     c.setFont(BOLD if s == 'X' else FONT, size)
@@ -401,18 +402,18 @@ def build_rji(d):
     for base, sp in ((0.0, s1), (93.0, s2)):
         if not sp['represented']:
             s.mark(1, 19, 423.1 + base, x1=29, bot=435.1 + base, size=6)
-        s.text(1, 41, 413.0 + base, sp['last'], 8, height=10)
-        s.text(1, 41, 436.1 + base, sp['first'], 8, height=10)
-        s.text(1, 41, 459.4 + base, sp.get('middle', ''), 8, height=10)
+        s.text(1, 41, 413.0 + base, sp['last'], 8, height=7.5)
+        s.text(1, 41, 436.1 + base, sp['first'], 8, height=7.5)
+        s.text(1, 41, 459.4 + base, sp.get('middle', ''), 8, height=7.5)
         if sp['represented']:
             a = sp['attorney_name'].split()
-            s.text(1, 181, 389.7 + base, ' '.join(a[:-1]), 8, height=10)
-            s.text(1, 376, 389.7 + base, a[-1] if a else '', 8, height=10)
-            s.text(1, 181, 436.1 + base, sp['attorney_address_line1'], 8, height=10)
-            s.text(1, 181, 459.4 + base, sp['attorney_phone'], 8, height=10)
+            s.text(1, 181, 389.7 + base, ' '.join(a[:-1]), 8, height=7.5)
+            s.text(1, 376, 389.7 + base, a[-1] if a else '', 8, height=7.5)
+            s.text(1, 181, 436.1 + base, sp['attorney_address_line1'], 8, height=7.5)
+            s.text(1, 181, 459.4 + base, sp['attorney_phone'], 8, height=7.5)
         else:
-            s.text(1, 181, 436.1 + base, sp['address'], 8, height=10)
-            s.text(1, 181, 459.4 + base, sp['phone'], 8, height=10)
+            s.text(1, 181, 436.1 + base, sp['address'], 8, height=7.5)
+            s.text(1, 181, 459.4 + base, sp['phone'], 8, height=7.5)
     s.mark(1, 567, 523.8, x1=577, bot=534.9, size=6)      # issue joined: NO
     s.text(1, 320, 731.0, d.get('preparer_name', ''), 9, height=10)
     return s
@@ -440,16 +441,16 @@ def build_entry(d):
     server, other = ('spouse1', 'spouse2') if d['serves_judgment'] == 'spouse1' else ('spouse2', 'spouse1')
     srv, oth = d[server], d[other]
     # FROM block
-    s.mark(1, 420 if srv['represented'] else 324, 423.2 if server == 'spouse1' else 438.1,
-           x1=427 if srv['represented'] else 331,
-           bot=(423.2 if server == 'spouse1' else 438.1) + 12, size=8)
+    t = 423.2 if server == 'spouse1' else 438.1
+    x0 = 420 if srv['represented'] else 324
+    s.mark(1, x0, t - 3.3, x1=x0 + 7, bot=t + 3.7, size=6.5)
     s.text(1, 326, 465.4, srv['attorney_name'] if srv['represented'] else full_name(srv), 9)
     s.text(1, 326, 481.2, srv['attorney_address_line1'] if srv['represented'] else srv['address'], 9)
     s.text(1, 326, 497.0, srv['attorney_address_line2'], 9)
     # TO block
-    s.mark(1, 168 if oth['represented'] else 72, 530.3 if other == 'spouse1' else 545.2,
-           x1=175 if oth['represented'] else 79,
-           bot=(530.3 if other == 'spouse1' else 545.2) + 12, size=8)
+    t = 530.3 if other == 'spouse1' else 545.2
+    x0 = 168 if oth['represented'] else 72
+    s.mark(1, x0, t - 3.3, x1=x0 + 7, bot=t + 3.7, size=6.5)
     s.text(1, 74, 577.2, oth['attorney_name'] if oth['represented'] else full_name(oth), 9)
     s.text(1, 74, 593.0, oth['attorney_address_line1'] if oth['represented'] else oth['address'], 9)
     s.text(1, 74, 608.9, oth['attorney_address_line2'], 9)
